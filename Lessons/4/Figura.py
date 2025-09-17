@@ -9,9 +9,20 @@ Czy klasa `Kwadrat` może dziedziczyć po `Prostokat`? Dlaczego tak lub dlaczego
 from math import pi, pow
 
 # Klasy
+class Figura:
+    def pole(self):
+        pass
 
+    def obwod(self):
+        pass
 
-class Kolo:
+    def wyswietl(self):
+        pass
+
+    def wyswietl_z_klasy_bazowej(self):
+        print(f"To jest klasa bazowa - ale potrafi policzyć obówd {self.obwod()} i pole {self.pole()}")
+
+class Kolo(Figura):
     def __init__(self, promien):
         self.promien = promien
 
@@ -28,7 +39,7 @@ class Kolo:
         )
 
 
-class Kwadrat:
+class Kwadrat(Figura):
     def __init__(self, bok):
         self.bok = bok
 
@@ -45,3 +56,6 @@ class Kwadrat:
 
 
 # Testy
+kolo = Kolo(10)
+
+kolo.wyswietl_z_klasy_bazowej()
