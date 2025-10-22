@@ -2,6 +2,8 @@ import pygame
 import random
 import time
 import os
+from Kierunek import Kierunek
+from Waz import Waz
 from Jablko import Jablko
 
 # Ustawienie katalogu roboczego
@@ -29,6 +31,11 @@ pygame.font.init()
 ekran = pygame.display.set_mode([SZEROKOSC_EKRANU, WYSOKOSC_EKRANU])
 zegar = pygame.time.Clock()
 
+# Wąż
+waz = Waz()
+PORUSZ_WEZEM = pygame.USEREVENT + 1
+pygame.time.set_timer(PORUSZ_WEZEM, 200)
+
 # Jabłka
 jablko = Jablko()
 
@@ -39,6 +46,10 @@ jablka.add(jablko)
 moja_czcionka = pygame.font.SysFont("Comic Sans MS", 24)
 
 gra_dziala = True
+
+# Czyszczenie zdarzeń
+pygame.event.get()
+
 while gra_dziala:
     for zdarzenie in pygame.event.get():
         match zdarzenie.type:
@@ -48,9 +59,24 @@ while gra_dziala:
                 match zdarzenie.key:
                     case pygame.K_ESCAPE:
                         gra_dziala = False
+                    ######################################
+                    case pygame.K_w:
+                        waz.zmien_kierunek(Kierunek.GORA)
+                    case pygame.K_d:
+                        waz.zmien_kierunek(Kierunek.PRAWO)
+                    case pygame.K_s:
+                        waz.zmien_kierunek(Kierunek.DOL)
+                    case pygame.K_a:
+                        waz.zmien_kierunek(Kierunek.LEWO)
+                    ######################################
+            case PORUSZ_WEZEM:
+                waz.aktualizuj()
     
     # Rysowanie tła
     ekran.blit(tlo, (0, 0))
+
+    # Rysowanie głowy wężą
+    ekran.blit(waz.obraz, waz.rect)
 
     # Rysowanie jabłek
     for jablko in jablka:
