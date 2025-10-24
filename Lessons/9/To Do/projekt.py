@@ -48,30 +48,28 @@ moja_czcionka = pygame.font.SysFont("Comic Sans MS", 24)
 gra_dziala = True
 
 # Czyszczenie zdarzeń
-pygame.event.get()
+pygame.event.clear()
 
 while gra_dziala:
     for zdarzenie in pygame.event.get():
         match zdarzenie.type:
-            case pygame.QUIT:
+            case x if x == pygame.QUIT:
                 gra_dziala = False
-            case pygame.KEYDOWN:
+            case x if x == pygame.KEYDOWN:
                 match zdarzenie.key:
-                    case pygame.K_ESCAPE:
+                    case x if x == pygame.K_ESCAPE:
                         gra_dziala = False
-                    ######################################
-                    case pygame.K_w:
+                    case x if x == pygame.K_w:
                         waz.zmien_kierunek(Kierunek.GORA)
-                    case pygame.K_d:
+                    case x if x == pygame.K_d:
                         waz.zmien_kierunek(Kierunek.PRAWO)
-                    case pygame.K_s:
+                    case x if x == pygame.K_s:
                         waz.zmien_kierunek(Kierunek.DOL)
-                    case pygame.K_a:
+                    case x if x == pygame.K_a:
                         waz.zmien_kierunek(Kierunek.LEWO)
-                    ######################################
-            case PORUSZ_WEZEM:
+            case x if x == PORUSZ_WEZEM:
                 waz.aktualizuj()
-    
+
     # Rysowanie tła
     ekran.blit(tlo, (0, 0))
 
