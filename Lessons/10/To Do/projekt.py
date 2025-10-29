@@ -70,15 +70,28 @@ while gra_dziala:
             case x if x == PORUSZ_WEZEM:
                 waz.aktualizuj()
 
+    # Sprawdzenie kolizji z jabłkiem
+    kolizja_z_jablkiem = pygame.sprite.spritecollideany(waz, jablka)
+    if kolizja_z_jablkiem != None:
+        kolizja_z_jablkiem.kill()
+        waz.jedz_jablko()
+        jablka.add(Jablko())
+
     # Rysowanie tła
     ekran.blit(tlo, (0, 0))
 
     # Rysowanie głowy wężą
     ekran.blit(waz.obraz, waz.rect)
 
+    # Rysowanie segmentów
+    waz.rysuj_segmenty(ekran)
+
     # Rysowanie jabłek
     for jablko in jablka:
         ekran.blit(jablko.obraz, jablko.rect)
+
+    if waz.sprawdz_kolizje():
+        gra_dziala = False
 
     pygame.display.flip()
     zegar.tick(30)
