@@ -3,24 +3,24 @@ class Stack:
         self.stack = []
 
     def push(self, item):
-        # TODO
-        pass
+        self.stack.append(item)
 
     def pop(self):
-        # TODO
-        pass
+        if not self.is_empty():
+            # return self.stack.pop()
+            last_element = self.stack[-1]
+            self.stack = self.stack[0:-1]
+            return last_element
 
     def peek(self):
-        # TODO
-        pass
+        if not self.is_empty():
+            return self.stack[-1]
 
     def is_empty(self):
-        # TODO
-        pass
+        return self.size() == 0
 
     def size(self):
-        # TODO
-        pass
+        return len(self.stack)
 
 
 # Testy

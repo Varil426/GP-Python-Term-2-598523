@@ -3,20 +3,18 @@ class Queue:
         self.queue = []
 
     def is_empty(self):
-        # TODO
-        pass
+        return len(self.queue) == 0
 
     def enqueue(self, item):
-        # TODO
-        pass
+        self.queue.append(item)
 
     def dequeue(self):
-        # TODO
-        pass
+        if not self.is_empty():
+            return self.queue.pop(0)
 
     def peek(self):
-        # TODO
-        pass
+        if not self.is_empty():
+            return self.queue[0]
 
 
 # Testy
