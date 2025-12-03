@@ -1,3 +1,1 @@
-a = []
-
-print(a.pop())
+print("bb" < "ba")
