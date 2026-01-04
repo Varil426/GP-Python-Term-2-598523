@@ -1,0 +1,28 @@
+{
+  "spis_gier": [
+    {
+      "tytul": "Minecraft",
+      "rok_wydania": "2011",
+      "wydawca": "Mojang Studios",
+      "gatunek": "akcja, niezalezna, survival"
+    },
+    {
+      "tytul": "Wiedzmin3",
+      "rok_wydania": "2015",
+      "wydawca": "CD Project Red",
+      "gatunek": "RPG"
+    },
+    {
+      "tytul": "Roblox",
+      "rok_wydania": "2006",
+      "wydawca": "Roblox Corporation",
+      "gatunek": "strzelanka, niezalezna, rpg"
+    },
+    {
+      "tytul": "Valorant",
+      "rok_wydania": "2020",
+      "wydawca": "Riot Games",
+      "gatunek": "strzelanka"
+    }
+  ]
+}
