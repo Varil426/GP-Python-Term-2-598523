@@ -1,0 +1,39 @@
+{
+    "spis_gier": [
+        {
+            "gatunek": "akcja, niezalezna, survival",
+            "rok_wydania": "2011",
+            "tytul": "Minecraft",
+            "wydawca": "Mojang Studios"
+        },
+        {
+            "gatunek": "RPG",
+            "rok_wydania": "2015",
+            "tytul": "Wiedzmin3",
+            "wydawca": "CD Project Red"
+        },
+        {
+            "gatunek": "strzelanka, niezalezna, rpg",
+            "rok_wydania": "2006",
+            "tytul": "Roblox",
+            "wydawca": "Roblox Corporation"
+        },
+        {
+            "gatunek": "strzelanka",
+            "rok_wydania": "2020",
+            "tytul": "Valorant",
+            "wydawca": "Riot Games"
+        },
+        {
+            "data_wydania": 2016,
+            "gatunek": [
+                "Horror",
+                "Survival",
+                "Multiplayer",
+                "Co-Op"
+            ],
+            "nazwa_gry": "Dead By Daylight",
+            "wydawca": "Behaviour Interactive"
+        }
+    ]
+}
