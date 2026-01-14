@@ -1,10 +1,4 @@
-from pprint import pprint
+test_array = [12,312,321,312,321,321,321,12313123]
 
-dict1 = {"a": 1, "b": 2}
-dict2 = {"c": 3, "d": 4}
-
-dict3 = {**dict1, **dict2}
-dict4 = dict1 | dict2
-
-pprint(dict3)
-pprint(dict4)
+print(max(test_array))
+print(min(test_array))

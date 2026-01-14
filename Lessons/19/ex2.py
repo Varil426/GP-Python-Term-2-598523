@@ -45,3 +45,11 @@ lista_gier = [
     42,
     None,
 ]
+
+poprawna_lista_gier = []
+
+for element in lista_gier:
+    if isinstance(element, str):
+        poprawna_lista_gier.append(element)
+
+print(poprawna_lista_gier)
