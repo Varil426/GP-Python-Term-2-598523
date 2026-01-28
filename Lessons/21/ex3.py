@@ -7,3 +7,6 @@ C = (F - 32) * 5/9
 """
 
 stopnie_fahrenheit = [32, 68, 104, 140]
+
+wynik = [(f-32)*5/9 for f in stopnie_fahrenheit]
+print(wynik)

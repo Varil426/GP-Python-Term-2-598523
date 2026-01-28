@@ -7,8 +7,12 @@ Jak poprawnie obsłużyć taki wyjątek?
 
 
 def dzielenie_i_mnozenie(a, b):
-    # TODO
-    pass
+    # Mnożenie
+    print(f"Wynik mnożenia to: {a*b}")
+    try:
+        print(f"Wynik dzielenia to: {a/b}")
+    except ZeroDivisionError as zeroDivisionError:
+        print("Nie można dzielić przez 0")
 
 
 # Dane testowe

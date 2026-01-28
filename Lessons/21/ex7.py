@@ -6,8 +6,15 @@ zdania podniesiony powinien zostać wyjątek z informacją o wymaganej korekcie.
 
 
 def zdanie_na_wyrazy(zdanie):
-    # TODO
-    pass
+    try:
+        if not zdanie[0].isupper():
+            raise Exception("Zdanie zaczyna się małą literą")
+        if not zdanie[-1] == ".":
+            raise Exception("Zdanie nie kończy się kropką")
+        
+        print(zdanie.split(" "))
+    except Exception as e:
+        print(e)
 
 
 # Dane testowe

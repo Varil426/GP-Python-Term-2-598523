@@ -6,8 +6,10 @@ Jak poprawnie obsłużyć taki wyjątek?
 
 
 def dodawanie(a, b):
-    # TODO
-    pass
+    try:
+        print(f"Wynik dodawania {a} + {b} = {a+b}")
+    except TypeError:
+        print("Typy nie są zgodne")
 
 
 # Dane testowe
