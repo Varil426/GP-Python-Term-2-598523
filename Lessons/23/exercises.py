@@ -8,7 +8,6 @@ def print_ex(exercise_number: int):
     print(f"\n\nZadanie {exercise_number}\n\n")
     print("-" * separator_length)
 
-
 """
 Zadanie 1
 
@@ -27,19 +26,35 @@ print_ex(1)
 
 # Miejsce na kod - Zadanie 1
 
+def print_array():
+    arr = np.array([[-1,2,-3],[4,5,6],[7,8,9],[10, 11, 12]])
+    print(f"Tablica:\n{arr}")
+    print(f"Pierwszy element tablicy: {arr[0]}")
+    print(f"Pierwszy zagnieżdżony element tablicy: {arr[0][0]}") # Alternatywnie arr[0, 0]
+    print(f"Typ tablicy: {type(arr)}")
+    print(f"Kształt tablicy: {arr.shape}")
+
+    return arr
+
+
+arr = print_array()
+
 # Koniec miejsca na kod - Zadanie 1
 
+"""
+W zadaniu 1 stworzyliśmy tablicę 4x3, także w zadaniu 2, nie będzie 9 elementów, a 12.
+"""
 
 """
 Zadanie 2
 
 Stwórz funkcję `shapeshifter(arr)` która przyjmuje jako argument utworzoną wcześniej tablicę. Funkcja powinna:
-a)Zmienić rozmiar tablicy na 9x1,
-b)Zmienić rozmiar tablicy na 1x9,
-c)Zmienić rozmiar tablicy na 3x3,
-d)Zmienić rozmiar tablicy na -1x9,
-e)Zmienić rozmiar tablicy na 3x-1,
-f)Podzielić tablicę na 3 nowe tablice.
+a) zmienić rozmiar tablicy na 9x1,
+b) zmienić rozmiar tablicy na 1x9,
+c) zmienić rozmiar tablicy na 3x3,
+d) zmienić rozmiar tablicy na -1x9,
+e) zmienić rozmiar tablicy na 3x-1,
+f) podzielić tablicę na 3 nowe tablice.
 
 Wyświetl tablicę na każdym etapie.
 
@@ -48,6 +63,27 @@ Wyświetl tablicę na każdym etapie.
 print_ex(2)
 
 # Miejsce na kod - Zadanie 2
+
+def shapeshifter(arr):
+    print("Kształt tablicy 12x1")
+    print(arr.reshape(12,1))
+    print("Kształt tablicy 1x12")
+    print(arr.reshape(1,12))
+    print("Kształt tablicy 3x4 i 4x3")
+    print(arr.reshape(3,4))
+    print(arr.reshape(4,3))
+    print("Kształt tablicy -1x12")
+    print(arr.reshape(-1,12))
+    print("Kształt tablicy 6x-1")
+    print(arr.reshape(6,-1))
+    print("Podział tablicy na 3")
+    flattenarr = arr.flatten()
+    print(flattenarr)
+    newarr = np.array_split(flattenarr, 3)
+    print(newarr)
+
+
+shapeshifter(arr)
 
 # Koniec miejsca na kod - Zadanie 2
 
@@ -65,6 +101,23 @@ print_ex(3)
 
 # Miejsce na kod - Zadanie 3
 
+def print_array_and_type(arr):
+    print(arr)
+    print(type(arr))
+
+def data_format():
+    try:
+        arr = np.array([1, 123.32, "123"], dtype="i")
+        print_array_and_type(arr)
+        arr = np.array([1, 123.32, "123", "Bartek"], dtype="U")
+        print_array_and_type(arr)
+        arr = np.array([1, 123.32, "123", "Bartek"], dtype="f")
+        print_array_and_type(arr)
+    except Exception as e:
+        print(e)
+
+data_format()
+
 # Koniec miejsca na kod - Zadanie 3
 
 """
@@ -79,6 +132,13 @@ print_ex(4)
 
 # Miejsce na kod - Zadanie 4
 
+def sorted_ndarray():
+    arr = np.array([[5,2,9],[8,1,4],[3,7,6]])
+    print(f"Tablica przed sortowaniem: {arr}")
+    print(f"Tablica po sortowaniu: {np.sort(arr)}")
+
+sorted_ndarray()
+
 # Koniec miejsca na kod - Zadanie 4
 
 """
@@ -92,6 +152,15 @@ całkowitych od 0 do 100, oraz 10 losowych liczb typu float z zakresu od 0 do 1.
 print_ex(5)
 
 # Miejsce na kod - Zadanie 5
+
+def generate_random_numbers():
+    for _ in range(10):
+        print(random.randint(100))
+    for _ in range(10):
+        print(random.rand())
+
+generate_random_numbers()
+
 
 # Koniec miejsca na kod - Zadanie 5
 
@@ -109,6 +178,14 @@ d) wygeneruje 100 losowych liczb, korzystając ze zbioru liczb 3, 5, 7, 9, gdzie
 print_ex(6)
 
 # Miejsce na kod - Zadanie 6
+
+def pick_random_numbers():
+    print(random.rand(3,5))
+    print(random.choice([3,5,7,9]))
+    print(random.choice([3,5,7,9], size=(3,5)))
+    print(random.choice([3,5,7,9], p=[0.1,0.3,0.6,0], size=(100)))
+
+pick_random_numbers()
 
 # Koniec miejsca na kod - Zadanie 6
 

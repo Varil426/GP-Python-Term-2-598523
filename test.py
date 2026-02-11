@@ -1,1 +1,5 @@
-print([123,123] + [321,312])
+print(type(1))
+print(type(2))
+print(type(5))
+print(type(6))
+print(type("80.123123"))
