@@ -1,5 +1,4 @@
-print(type(1))
-print(type(2))
-print(type(5))
-print(type(6))
-print(type("80.123123"))
+test = [1,2,3]
+test2 = [x**2 for x in test]
+
+print(test2)

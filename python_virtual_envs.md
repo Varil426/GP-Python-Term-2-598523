@@ -51,3 +51,15 @@ lub
 ```bash
 python -m pip freeze > requirements.txt
 ```
+
+## Instalacja paczek z pliku `requirements.txt`
+
+```bash
+pip install -r requirements.txt
+```
+
+lub
+
+```bash
+python -m pip install -r requirements.txt
+```
