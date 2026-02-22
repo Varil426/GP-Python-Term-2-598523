@@ -1,0 +1,17 @@
+Spotkanie 1:
+Jan Kowalski, email: jan.kowalski@example.com, tel: 123-456-789.
+Anna Nowak, email: anna_nowak@example.com, tel: 987-654-321.
+Piotr Wiśniewski, email: piotr.wisniewski@orange.pl, tel: 456-789-123.
+Spotkanie odbędzie się 2024-10-20 o godzinie 14:30.
+
+SpotKanie 2:
+Tomasz Lewandowski, email: tomasz.lewandowski@gmail.com, tel: 654-321-987.
+Agnieszka Szymańska, email: agnieszka.szymanska@protonmail.com, tel: 123-789-456.
+Anna Nowak, email: anna_nowak@onet.pl, tel: 987-654-321.
+Spotkanie odbędzie się 2024-11-05 o godzinie 10:00.
+
+Spotkanie 3:
+Maria Zielińska, email: maria.zielinska@telefonica.com, tel: 321-654-987.
+Adam Wójcik, email: adam.wojcik@zoho.pl, tel: 234-567-890.
+Agnieszka Szymańska, agnieszka.szymanska@protonmail.com, tel: 123-789-456.
+Spotkanie odbędzie się 2025-12-13 o godzinie 12:00.
