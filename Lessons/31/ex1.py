@@ -5,10 +5,15 @@ Na przykład: kot3ala3c11 -> kotkotkotalaalaalaccccccccccc.
 Załóż, że dane zawsze zostaną dostarczone w prawidłowym formacie.
 """
 
+import re
+
 
 def create_string(text):
-    # TODO
-    pass
+    strings = re.findall(r'\D+', text)
+    numbers = re.findall(r'\d+', text)
+    helper_array = zip(strings, numbers)
+    return "".join([word * int(count) for word, count in helper_array])
 
 
-create_string("kot3ala3c11")
+result = create_string("kot3ala3c11")
+print(result)

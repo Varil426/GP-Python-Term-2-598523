@@ -5,8 +5,7 @@ Na przykład, dla listy `[3, -2, 5, -4]`, jej kwadraty to `[9, 4, 25, 16]`, a wy
 
 
 def sort_by_square(data):
-    # TODO
-    pass
+    return sorted(data, key = lambda x: x**2)
 
 
 print(sort_by_square([1, -2, 0.5, 4, -3]))  # [0.5, 1, -2, -3, 4]
